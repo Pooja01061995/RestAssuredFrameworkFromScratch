@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="Utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="API Tests" verbose="2" preserve-order="true">
+        <classes>
+
+            <class name="Tests.DataDrivenTestsUsers">
+                <methods>
+                    <include name="postUser"/>
+                    <include name="deleteUser"/>
+                    <include name="updateUser"/>
+                    <include name="getUser"/>
+                </methods>
+            </class>
+
+            <class name="Tests.PetTests">
+                <methods>
+                    <include name="testPostPet"/>
+                    <include name="testGetPetById"/>
+                    <include name="testUpdatePetById"/>
+                    <include name="testDeletePetById"/>
+                </methods>
+            </class>
+
+            <class name="Tests.StoreTests">
+                <methods>
+                    <include name="testPostOrder"/>
+                    <include name="testGetOrderById"/>
+                    <include name="testDeleteOrderById"/>
+                </methods>
+            </class>
+
+            <class name="Tests.UserTests">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="getUserByName"/>
+                    <include name="updateUserByName"/>
+                    <include name="deleteUserByName"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
